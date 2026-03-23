@@ -1,18 +1,13 @@
 {
-  "name": "freelance-portfolio",
-  "version": "1.0.0",
-  "type": "module",
+  "devDependencies": {
+    "astro": "^3.7.0",   // change from 3.8.3 to 3.7.0 (latest stable)
+    "tailwindcss": "^3.3.2",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
-  },
-  "dependencies": {
-    "astro": "^3.8.3"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.5.3",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.26"
   }
 }
