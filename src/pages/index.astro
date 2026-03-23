@@ -1,0 +1,81 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+const projects = [
+  {
+    title: "Battery Failure Prediction",
+    description: "ML + rule-based system predicting battery failures 30 days in advance. Built using PySpark, MLflow pipelines, and feature engineering for high accuracy.",
+    link: "#"
+  },
+  {
+    title: "Media Mix Modeling",
+    description: "Optimized marketing ROI using regression and time series models, analyzing media spends across channels to improve campaign efficiency.",
+    link: "#"
+  },
+  {
+    title: "NLP Product Mapping",
+    description: "Mapped FMCG product hierarchies across datasets using BERT embeddings and similarity matching, ensuring consistent reporting for multiple clients.",
+    link: "#"
+  }
+];
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satish K | Freelance Data Scientist</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+    <Header />
+
+    <main class="max-w-6xl mx-auto px-6 py-24">
+      <!-- About -->
+      <section class="mb-20">
+        <h2 class="text-4xl font-bold mb-6">About Me</h2>
+        <p class="text-lg leading-relaxed">
+          Freelance Data Scientist with 5+ years of experience building ML & NLP solutions.
+          Specialized in time series forecasting, media mix modeling, and product hierarchy mapping.
+          I solve real-world business problems for clients worldwide.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section class="mb-20">
+        <h2 class="text-4xl font-bold mb-6">Skills</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">Python</span>
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">PySpark</span>
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">MLflow</span>
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">TensorFlow</span>
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">Time Series</span>
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">NLP</span>
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">Power BI</span>
+          <span class="bg-white/10 px-4 py-2 rounded-full text-sm">Azure</span>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="mb-20">
+        <h2 class="text-4xl font-bold mb-6">Projects</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          {projects.map(project => <ProjectCard {...project} />)}
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="mb-20">
+        <h2 class="text-4xl font-bold mb-6">Contact</h2>
+        <p class="mb-4">Email: <a href="mailto:satish9901744@gmail.com" class="underline text-blue-400">Send me a message</a></p>
+        <p class="mb-4">Resume: <a href="/resume.pdf" download class="underline text-blue-400">Download Resume</a></p>
+        <ContactForm />
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
