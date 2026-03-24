@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set dark gradient background for entire page */
+body {
+  @apply bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 text-white font-sans;
+}
